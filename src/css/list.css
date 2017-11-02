@@ -1,0 +1,29 @@
+.box-list .box-list-item {
+    margin: 0 15px;
+    line-height: 26px;
+    white-space: nowrap;
+    overflow: hidden;
+    list-style: decimal-leading-zero inside;
+    color: #009E94;
+}
+
+/*
+
+*/
+.box-list .box-list-static {
+    line-height: 26px;
+    list-style-position: inside;
+    list-style-type: disc;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.box-list-1{
+
+}
+.box-list-1 .box-list-info{
+    position: relative;
+    font-size: 13px;
+    color: #999;
+}
+
