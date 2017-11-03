@@ -17,6 +17,7 @@ gulp.task('minCss',function () {
 gulp.task("minJs",function () {
    gulp.src("src/js/*.js")
        //.pipe(uglify())
+       .pipe(conct("boxui.js"))
        .pipe(gulp.dest('dist/js'));
 });
 
@@ -25,6 +26,21 @@ gulp.task("minHtml",function () {
         .pipe(gulp.dest('dist/'));
 });
 
+gulp.task("copyImg",function () {
+    gulp.src('src/img/*')
+        .pipe(gulp.dest('dist/img'))
+});
+
+gulp.task("copyboxui",function () {
+    gulp.src('src/boxui/*.html')
+        .pipe(gulp.dest('dist/boxui'))
+});
+
+gulp.task("copyboxuiadmin",function () {
+    gulp.src('src/boxuiadmin/*.html')
+        .pipe(gulp.dest('dist/boxuiadmin'))
+});
+
 gulp.task('default', function() {
-    gulp.start('minCss','minJs','minHtml');
+    gulp.start('minCss','minJs','minHtml','copyImg','copyboxui','copyboxuiadmin');
 });
