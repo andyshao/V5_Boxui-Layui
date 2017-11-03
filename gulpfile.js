@@ -16,7 +16,7 @@ gulp.task('minCss',function () {
 
 gulp.task("minJs",function () {
    gulp.src("src/js/*.js")
-       //.pipe(uglify())
+       .pipe(uglify())
        .pipe(conct("boxui.js"))
        .pipe(gulp.dest('dist/js'));
 });
@@ -32,12 +32,12 @@ gulp.task("copyImg",function () {
 });
 
 gulp.task("copyboxui",function () {
-    gulp.src('src/boxui/*.html')
+    gulp.src('src/boxui/**/*.html')
         .pipe(gulp.dest('dist/boxui'))
 });
 
 gulp.task("copyboxuiadmin",function () {
-    gulp.src('src/boxuiadmin/*.html')
+    gulp.src('src/boxuiadmin/**/*')
         .pipe(gulp.dest('dist/boxuiadmin'))
 });
 
